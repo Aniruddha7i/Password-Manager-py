@@ -33,13 +33,13 @@ def add():
         file = open("password.txt","a")
         file.write(f"{name} : {userName} : {encodePassword}\n")
 
-def edit():
-    pass
+
+    
 
 def main():
     print("This is a Password Manager System")
     while(True):
-        mode = input("Would you like to add a new password or view existing ones (view, add, edit), press q to quit? ").lower()
+        mode = input("Would you like to add a new password or view existing ones (view, add), press q to quit? ").lower()
         if(mode=="q"): 
             break
         elif(mode=="view"):
@@ -49,9 +49,6 @@ def main():
         elif(mode=="add"):
             add()
             print("Add Successfully!!")
-        elif(mode="edit"):
-            edit()
-            print("Edit Successfully!!")
         else:
             print("Invalid mode.")
     
